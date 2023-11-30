@@ -4,21 +4,17 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pickBazar.pages.ContactPage;
 import pickBazar.pages.HomePage;
-import pickBazar.utilities.ConfigReader;
 import pickBazar.utilities.Driver;
 import pickBazar.utilities.ReusableMethods;
 
-public class TC_007 {
+public class TC_015 {
 /*"1-Kullanıcı ana sayfaya gider
 2-Kullanıcı Contact butonuna tıklar
-3-Kullanıcı Name alanına ""Tester"" yazar
-4-Kullanıcı Email alanına ""nenopey862frandin.com"" yazar
-5-Kullanıcı Subject alanına ""TestCase1"" yazar
-6-Kullanıcı Description alanına ""TestSteps"" yazar
-7-Kullanıcı Submit Butonuna tıklar
-8-Kullanıcı Email alanının altında""The provided email address format is not valid"" uyarı mesajının geldiğini doğrular
+3-Kullanıcı ekranin sol tarafinda -Follow Us  görüntülendiğini doğrular
+4-Kullanıcı ekranin sol tarafinda , ""Facebook, Twitter, Instagram"" link butonlari görüntülendiğini doğrular
 
 "
+
 
 */
     @Test

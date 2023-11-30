@@ -20,7 +20,7 @@ public class TC_001 {
         Driver.getDriver().get(ConfigReader.getProperty("pickBazarUrl"));
         homePage.contactButon.click();
         Assert.assertTrue(contactPage.questionsCommentsConcernsText.isDisplayed());
-
+        Driver.closeDriver();
     }
 
 

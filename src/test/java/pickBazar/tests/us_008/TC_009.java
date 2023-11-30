@@ -4,36 +4,35 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pickBazar.pages.ContactPage;
 import pickBazar.pages.HomePage;
-import pickBazar.utilities.ConfigReader;
 import pickBazar.utilities.Driver;
 import pickBazar.utilities.ReusableMethods;
 
-public class TC_006 {
+public class TC_009 {
 /*"1-Kullanıcı ana sayfaya gider
 2-Kullanıcı Contact butonuna tıklar
 3-Kullanıcı Name alanına ""Tester"" yazar
-4-Kullanıcı Subject alanına ""TestCase1"" yazar
+4-Kullanıcı Email alanına ""nenopey862@frandin.com"" yazar
 5-Kullanıcı Description alanına ""TestSteps"" yazar
 6-Kullanıcı Submit Butonuna tıklar
-7-Kullanıcı Email alanının altında ""You must need to provide your email address"" uyarı mesajının geldiğini doğrular
+7-Kullanıcı Subject alanının altında ""What subject do you want to discuss with us?"" uyarı mesajının geldiğini doğrular
 "
+
 
 */
     @Test
     public void test1(){
         HomePage homePage = new HomePage();
         ContactPage contactPage = new ContactPage();
-        Driver.getDriver().get(ConfigReader.getProperty("pickBazarUrl"));
-        homePage.contactButon.click();
+        homePage.getContactPage();
         contactPage.nameTextAlani.sendKeys("Tester");
-        //contactPage.emailTextAlani.sendKeys("nenopey862@frandin.com");
-        contactPage.subjectTextAlani.sendKeys("TestCase1");
+        contactPage.emailTextAlani.sendKeys("nenopey862@frandin.com");
+
         contactPage.descriptionTextAlani.sendKeys("TestSteps");
         contactPage.submitButon.click();
-        String expectedUyariMesaji = "You must need to provide your email address";
+        String expectedUyariMesaji = "What subject do you want to discuss with us?";
         ReusableMethods.waitFor(3);
-        Assert.assertTrue(contactPage.emailUyariMesaji.isDisplayed(),"Uyarı mesajı çıkmadı");
-        Assert.assertEquals(contactPage.emailUyariMesaji.getText(), expectedUyariMesaji,"Uyarı mesajı eşleşmedi");
+        Assert.assertTrue(contactPage.subjectUyariMesaji.isDisplayed(),"Uyarı mesajı çıkmadı");
+        Assert.assertEquals(contactPage.subjectUyariMesaji.getText(), expectedUyariMesaji,"Uyarı mesajı eşleşmedi");
         Driver.closeDriver();
 
     }

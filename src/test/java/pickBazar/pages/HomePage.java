@@ -3,14 +3,15 @@ package pickBazar.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import pickBazar.utilities.ConfigReader;
 import pickBazar.utilities.Driver;
 
 import java.util.List;
 
 public class HomePage {
 
-    public HomePage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public HomePage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "(//span[.='Grocery'])[1]")// ana ekrandaki grocery yazısı
@@ -47,24 +48,32 @@ public class HomePage {
     @FindBy(xpath = "//div[@role='menuitem']")
     public List<WebElement> menu;
     @FindBy(xpath = "//a[@class='flex items-center font-normal text-heading no-underline transition duration-200 hover:text-accent focus:text-accent']")
-    public  List<WebElement> findButton;
+    public List<WebElement> findButton;
     @FindBy(xpath = "//a[text()='Become a Seller']")
     public WebElement becomeASellerButton;
     @FindBy(xpath = "//button[text()='Join']")
     public WebElement join;
     @FindBy(xpath = "//img[@class='h-auto w-full']")
-    public List <WebElement> frame;
+    public List<WebElement> frame;
     @FindBy(xpath = "//img[@class='product-image']")
-    public List <WebElement> homepageurunler;
+    public List<WebElement> homepageurunler;
 
     @FindBy(xpath = "//a[.='Contact']")
     public WebElement contactButon;
 
 
+    public void getHomePage() {
+        Driver.getDriver().get(ConfigReader.getProperty("pickBazarUrl"));
+    }
 
-
-
-
-
+    public void getContactPage() {
+        getHomePage();
+        contactButon.click();
+    }
+    public void getGroceryPage() {
+        getHomePage();
+        menuButton.click();
+        shelfDropDownMenuList.get(0).click();
+    }
 
 }

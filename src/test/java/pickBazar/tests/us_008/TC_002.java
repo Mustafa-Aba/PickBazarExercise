@@ -33,7 +33,7 @@ public class TC_002 {
         Assert.assertTrue(contactPage.descriptionTextAlani.isDisplayed());
         Assert.assertTrue(contactPage.submitButon.isDisplayed());
         Assert.assertTrue(contactPage.submitButon.isEnabled());
-
+        Driver.closeDriver();
 
     }
 

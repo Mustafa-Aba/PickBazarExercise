@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Lenovo/IdeaProjects/PickBazarExercise/src/test/java/pickBazar/tests/us_008">
+        <classes>
+            <class name="pickBazar.tests.us_008.TC_001">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_002">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_003">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_004">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_005">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_006">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+<!--            <class name="pickBazar.tests.us_008.TC_007">-->
+<!--                <methods>-->
+<!--                    <include name="test1"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+    </test>
+</suite>
