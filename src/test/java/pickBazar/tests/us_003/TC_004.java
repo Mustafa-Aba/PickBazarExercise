@@ -51,6 +51,7 @@ public class TC_004  {
         ReusableMethods.waitFor(3);
         homePage.pickBazarButon.click();
         homePage.menuButton.click();
+        ReusableMethods.waitFor(3);
         homePage.menuBooksButton.click();
         ReusableMethods.waitFor(5);
         actualUrlList.add(Driver.getDriver().getCurrentUrl());

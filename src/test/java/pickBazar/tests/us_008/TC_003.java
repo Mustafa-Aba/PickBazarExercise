@@ -36,8 +36,8 @@ public class TC_003 {
 
         for (int i = 0; i <expectedUyariMesajlariList.size(); i++) {
             Assert.assertTrue(contactPage.uyariMesajlariList.get(i).isDisplayed(),i+" .inci uyarı mesajı cıkmadı");
-            Assert.assertEquals(contactPage.uyariMesajlariList.get(i).getText(), expectedUyariMesajlariList.get(i),
-                    i+" inci Uyarı mesajı eşleşmedi");        }
+            Assert.assertEquals(contactPage.uyariMesajlariList.get(i).getText(), expectedUyariMesajlariList.get(i),i+" inci Uyarı mesajı eşleşmedi");
+        }
         Driver.closeDriver();
     }
 }

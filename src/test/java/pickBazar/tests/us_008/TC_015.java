@@ -13,8 +13,6 @@ public class TC_015 {
 3-Kullanıcı ekranin sol tarafinda -Follow Us  görüntülendiğini doğrular
 4-Kullanıcı ekranin sol tarafinda , ""Facebook, Twitter, Instagram"" link butonlari görüntülendiğini doğrular
 
-"
-
 
 */
     @Test
@@ -22,15 +20,10 @@ public class TC_015 {
         HomePage homePage = new HomePage();
         ContactPage contactPage = new ContactPage();
         homePage.getContactPage();
-        contactPage.nameTextAlani.sendKeys("Tester");
-        contactPage.emailTextAlani.sendKeys("nenopey862frandin.com");
-        contactPage.subjectTextAlani.sendKeys("TestCase1");
-        contactPage.descriptionTextAlani.sendKeys("TestSteps");
-        contactPage.submitButon.click();
-        String expectedUyariMesaji = "The provided email address format is not valid";
-        ReusableMethods.waitFor(3);
-        Assert.assertTrue(contactPage.emailUyariMesaji.isDisplayed(),"Uyarı mesajı çıkmadı");
-        Assert.assertEquals(contactPage.emailUyariMesaji.getText(), expectedUyariMesaji,"Uyarı mesajı eşleşmedi");
+        Assert.assertTrue(contactPage.followUsBolumu.getText().contains("Follow Us"));
+        Assert.assertTrue(contactPage.facebookIcon.isDisplayed(),"'Facebook' link butonu görüntülenemedi");
+        Assert.assertTrue(contactPage.twitterIcon.isDisplayed(),"'Twitter' link butonu görüntülenemedi");
+        Assert.assertTrue(contactPage.instagramIcon.isDisplayed(),"'Instagram' link butonu görüntülenemedi");
         Driver.closeDriver();
 
     }

@@ -12,7 +12,6 @@ public class TC_012 {
 2-Kullanıcı Contact butonuna tıklar
 3-Kullanıcı ekranin sol tarafinda Address görüntülendiğini doğrular
 4-Kullanıcı ekranin sol tarafinda Phone görüntülendiğini doğrular
-
 "
 
 */
@@ -21,15 +20,8 @@ public class TC_012 {
         HomePage homePage = new HomePage();
         ContactPage contactPage = new ContactPage();
         homePage.getContactPage();
-        contactPage.nameTextAlani.sendKeys("Tester");
-        contactPage.emailTextAlani.sendKeys("nenopey862frandin.com");
-        contactPage.subjectTextAlani.sendKeys("TestCase1");
-        contactPage.descriptionTextAlani.sendKeys("TestSteps");
-        contactPage.submitButon.click();
-        String expectedUyariMesaji = "The provided email address format is not valid";
-        ReusableMethods.waitFor(3);
-        Assert.assertTrue(contactPage.emailUyariMesaji.isDisplayed(),"Uyarı mesajı çıkmadı");
-        Assert.assertEquals(contactPage.emailUyariMesaji.getText(), expectedUyariMesaji,"Uyarı mesajı eşleşmedi");
+        Assert.assertTrue(contactPage.addressBolumu.getText().contains("Address"));
+        Assert.assertTrue(contactPage.phoneBolumu.getText().contains("Phone"));
         Driver.closeDriver();
 
     }

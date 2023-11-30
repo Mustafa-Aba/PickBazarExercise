@@ -1,11 +1,15 @@
 package pickBazar.tests.us_008;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pickBazar.pages.ContactPage;
 import pickBazar.pages.HomePage;
 import pickBazar.utilities.Driver;
 import pickBazar.utilities.ReusableMethods;
+
+import java.util.Set;
 
 public class TC_014 {
 /*"1-Kullanıcı ana sayfaya gider
@@ -22,18 +26,21 @@ public class TC_014 {
         HomePage homePage = new HomePage();
         ContactPage contactPage = new ContactPage();
         homePage.getContactPage();
-        contactPage.nameTextAlani.sendKeys("Tester");
-        contactPage.emailTextAlani.sendKeys("nenopey862frandin.com");
-        contactPage.subjectTextAlani.sendKeys("TestCase1");
-        contactPage.descriptionTextAlani.sendKeys("TestSteps");
-        contactPage.submitButon.click();
-        String expectedUyariMesaji = "The provided email address format is not valid";
-        ReusableMethods.waitFor(3);
-        Assert.assertTrue(contactPage.emailUyariMesaji.isDisplayed(),"Uyarı mesajı çıkmadı");
-        Assert.assertEquals(contactPage.emailUyariMesaji.getText(), expectedUyariMesaji,"Uyarı mesajı eşleşmedi");
+        Assert.assertTrue(contactPage.visitThisSiteLink.isEnabled(),"'Visit this Site' butonu tıklanamadı");
+        String mainWindowHandle = Driver.getDriver().getWindowHandle();
+        contactPage.visitThisSiteLink.click();
+        Set<String> allWindowHandles = Driver.getDriver().getWindowHandles();
+        String newWindowHandle = "";
+        for (String handle : allWindowHandles) {
+            if (!handle.equals(mainWindowHandle)) {
+                newWindowHandle = handle;
+                break;
+            }
+        }
+        Driver.getDriver().switchTo().window(newWindowHandle);
+        Assert.assertEquals(Driver.getDriver().getCurrentUrl(),"https://redq.io/");
+        Driver.getDriver().switchTo().window(mainWindowHandle);
         Driver.closeDriver();
-
     }
-
 
 }

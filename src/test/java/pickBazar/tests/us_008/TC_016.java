@@ -7,6 +7,8 @@ import pickBazar.pages.HomePage;
 import pickBazar.utilities.Driver;
 import pickBazar.utilities.ReusableMethods;
 
+import java.util.Set;
+
 public class TC_016 {
 /*"1-Kullanıcı ana sayfaya gider
 2-Kullanıcı Contact butonuna tıklar
@@ -26,17 +28,21 @@ public class TC_016 {
         HomePage homePage = new HomePage();
         ContactPage contactPage = new ContactPage();
         homePage.getContactPage();
-        contactPage.nameTextAlani.sendKeys("Tester");
-        contactPage.emailTextAlani.sendKeys("nenopey862frandin.com");
-        contactPage.subjectTextAlani.sendKeys("TestCase1");
-        contactPage.descriptionTextAlani.sendKeys("TestSteps");
-        contactPage.submitButon.click();
-        String expectedUyariMesaji = "The provided email address format is not valid";
-        ReusableMethods.waitFor(3);
-        Assert.assertTrue(contactPage.emailUyariMesaji.isDisplayed(),"Uyarı mesajı çıkmadı");
-        Assert.assertEquals(contactPage.emailUyariMesaji.getText(), expectedUyariMesaji,"Uyarı mesajı eşleşmedi");
+        String contactPageTitle=Driver.getDriver().getTitle();
+        Assert.assertTrue(contactPage.facebookIcon.isEnabled(),"'Facebook' link butonu tıklanabilir değil");
+        contactPage.facebookIcon.click();
+        String facebookWindowTitle=Driver.getDriver().getTitle();
+        contactPage.switchToWindow(facebookWindowTitle);
+        String currentURL = Driver.getDriver().getCurrentUrl();
+        Assert.assertEquals(currentURL, "https://www.facebook.com/", "Link eşleşmedi");
+        contactPage.switchToWindow(contactPageTitle);
+//        Assert.assertTrue(contactPage.twitterIcon.isEnabled(),"'Twitter' link butonu tıklanabilir değil");
+//        Assert.assertTrue(contactPage.instagramIcon.isEnabled(),"'Instagram' link butonu tıklanabilir değil");
+//
+//        contactPage.linkWindowHandle(contactPage.facebookIcon,"https://www.facebook.com/");
+//        contactPage.linkWindowHandle(contactPage.twitterIcon,"https://twitter.com/");
+//        contactPage.linkWindowHandle(contactPage.instagramIcon,"https://www.instagram.com/");
         Driver.closeDriver();
-
     }
 
 
