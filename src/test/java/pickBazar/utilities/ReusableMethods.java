@@ -20,7 +20,7 @@ import java.util.*;
 import java.util.function.Function;
 
 public class ReusableMethods {
-    protected static WebDriver driver;
+    protected static WebDriver driver=Driver.getDriver();
 
     public static String takeScreenshot(String fileName) throws IOException {
         //WebDriverManager.chromedriver().setup();

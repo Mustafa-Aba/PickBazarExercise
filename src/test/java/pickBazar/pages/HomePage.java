@@ -11,6 +11,7 @@ import java.util.List;
 public class HomePage {
 
     public HomePage() {
+
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

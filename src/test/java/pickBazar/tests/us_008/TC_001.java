@@ -1,5 +1,6 @@
 package pickBazar.tests.us_008;
 
+import org.apache.logging.log4j.message.ReusableMessage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pickBazar.pages.ContactPage;
@@ -7,6 +8,7 @@ import pickBazar.pages.GroceryPage;
 import pickBazar.pages.HomePage;
 import pickBazar.utilities.ConfigReader;
 import pickBazar.utilities.Driver;
+import pickBazar.utilities.ReusableMethods;
 
 public class TC_001 {
 /*"1-Kullanıcı ana sayfaya gider

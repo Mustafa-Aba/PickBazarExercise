@@ -1,2 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/Lenovo/IdeaProjects/PickBazarExercise/src/test/java/pickBazar/tests/us_008"><classes><class name="pickBazar.tests.us_008.TC_001"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_002"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_003"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_004"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_005"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_006"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_007"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_008"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_009"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_010"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_011"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_012"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_013"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_014"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_015"><methods><include name="test1"/></methods></class><class name="pickBazar.tests.us_008.TC_016"><methods><include name="test1"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Lenovo/IdeaProjects/PickBazarExercise/src/test/java/pickBazar/tests/us_008">
+        <classes>
+            <class name="pickBazar.tests.us_008.TC_001">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_002">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_003">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_004">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_005">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_006">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_007">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_008">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_009">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_010">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_011">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_012">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_013">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_014">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_015">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+            <class name="pickBazar.tests.us_008.TC_016">
+                <methods>
+                    <include name="test1"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
